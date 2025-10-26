@@ -6,6 +6,11 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["rol"] !== "admin") {
 }
 include './db/conexion.php';
 
+include 'header.php';
+
+ 
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titulo = $_POST["titulo"];
     $autor = $_POST["autor"];

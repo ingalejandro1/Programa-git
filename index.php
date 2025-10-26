@@ -35,23 +35,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <style>
         html, body {
             height: 100%;
+            margin: 0;
         }
         body {
             display: flex;
             flex-direction: column;
+            /* Aquí colocas tu imagen de fondo */
+            background-image: url('img/bibliotecaisabelmanjarrez.jpeg');
+            background-size: cover; /* ajusta la imagen al tamaño de la pantalla */
+            background-position: center; /* centra la imagen */
+            background-repeat: no-repeat; /* evita que se repita */
         }
         .main-content {
             flex: 1;
         }
+        .login-box {
+           background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
     </style>
 </head>
-<body class="bg-light">
+<body>
     <?php include 'header.php'; ?>
 
     <div class="container mt-5 main-content">
-        <h2 class="text-center mb-4">Inicio de Sesión</h2>
+        <h2 class="text-center mb-4">Ingreso de usuarios</h2>
         <div class="row justify-content-center">
-            <div class="col-md-5">
+            <div class="col-md-5 login-box">
                 <form method="POST">
                     <div class="mb-3">
                         <label class="form-label">Correo electrónico:</label>
@@ -76,3 +90,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include 'footer.php'; ?>
 </body>
 </html>
+
